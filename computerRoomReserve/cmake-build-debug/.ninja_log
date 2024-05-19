@@ -1,0 +1,25 @@
+# ninja log v5
+5	433	7378339845107450	CMakeFiles/computerRoomReserve.dir/main.cpp.obj	502a59f6bdb56238
+434	727	7378339848037449	computerRoomReserve.exe	7d29297f047938b0
+5	521	7378354995878064	CMakeFiles/computerRoomReserve.dir/Identity.cpp.obj	c1ce51dd4290e4c8
+22	936	7378355000038062	CMakeFiles/computerRoomReserve.dir/Teacher.cpp.obj	af3e00d7956af332
+29	951	7378355000198063	CMakeFiles/computerRoomReserve.dir/OrderFile.cpp.obj	6a272bc27e59145f
+17	807	7378356374818644	CMakeFiles/computerRoomReserve.dir/Manager.cpp.obj	17a36e272da713a3
+6	655	7378356655304635	CMakeFiles/computerRoomReserve.dir/main.cpp.obj	502a59f6bdb56238
+18	793	7378356656674640	CMakeFiles/computerRoomReserve.dir/Manager.cpp.obj	17a36e272da713a3
+5	746	7378357307515285	CMakeFiles/computerRoomReserve.dir/Student.cpp.obj	32466da39f98195b
+748	1141	7378357311455284	computerRoomReserve.exe	a96cb1199c08d425
+5	633	7378357891505181	CMakeFiles/computerRoomReserve.dir/main.cpp.obj	502a59f6bdb56238
+634	1033	7378357895485174	computerRoomReserve.exe	a96cb1199c08d425
+5	784	7378358687823165	CMakeFiles/computerRoomReserve.dir/main.cpp.obj	502a59f6bdb56238
+26	874	7378358688713210	CMakeFiles/computerRoomReserve.dir/Teacher.cpp.obj	af3e00d7956af332
+12	920	7378358689143166	CMakeFiles/computerRoomReserve.dir/Student.cpp.obj	32466da39f98195b
+17	923	7378358689203173	CMakeFiles/computerRoomReserve.dir/Manager.cpp.obj	17a36e272da713a3
+21	937	7378358689353176	CMakeFiles/computerRoomReserve.dir/OrderFile.cpp.obj	6a272bc27e59145f
+938	1323	7378358693203172	computerRoomReserve.exe	a96cb1199c08d425
+5	618	7378360141344479	CMakeFiles/computerRoomReserve.dir/main.cpp.obj	502a59f6bdb56238
+620	1011	7378360145244487	computerRoomReserve.exe	a96cb1199c08d425
+11	671	7378362866654347	CMakeFiles/computerRoomReserve.dir/main.cpp.obj	502a59f6bdb56238
+5	811	7378362868054339	CMakeFiles/computerRoomReserve.dir/Student.cpp.obj	32466da39f98195b
+16	813	7378362868074344	CMakeFiles/computerRoomReserve.dir/Manager.cpp.obj	17a36e272da713a3
+813	1183	7378362871754338	computerRoomReserve.exe	a96cb1199c08d425
