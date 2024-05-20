@@ -8,66 +8,66 @@
 #include "OrderFile.h"
 
 
-//é»˜è®¤æ„é€ 
+//Ä¬ÈÏ¹¹Ôì
 Student::Student()
 {
 }
-//æœ‰å‚æ„é€   å‚æ•°ï¼šå­¦å·ã€å§“åã€å¯†ç 
+//ÓĞ²Î¹¹Ôì  ²ÎÊı£ºÑ§ºÅ¡¢ĞÕÃû¡¢ÃÜÂë
 Student::Student(int id, string name, string pwd)
 {
-    //åˆå§‹åŒ–å±æ€§
+    //³õÊ¼»¯ÊôĞÔ
     this->m_Id = id;
     this->m_Name = name;
     this->m_Pwd = pwd;
 
-    //åˆå§‹åŒ–æœºæˆ¿ä¿¡æ¯
+    //³õÊ¼»¯»ú·¿ĞÅÏ¢
     ifstream ifs;
     ifs.open(COMPUTER_FILE, ios::in);
 
     ComputerRoom com;
     while ( ifs >> com.m_ComId && ifs >> com.m_MaxNum)
     {
-        //å°†è¯»å–çš„ä¿¡æ¯æ”¾å…¥åˆ° å®¹å™¨ä¸­
+        //½«¶ÁÈ¡µÄĞÅÏ¢·ÅÈëµ½ ÈİÆ÷ÖĞ
         vCom.push_back(com);
     }
 
     ifs.close();
 }
 
-//èœå•ç•Œé¢
+//²Ëµ¥½çÃæ
 void Student::operMenu()
 {
-    cout << "æ¬¢è¿å­¦ç”Ÿä»£è¡¨ï¼š" << this->m_Name << "ç™»å½•ï¼" << endl;
+    cout << "»¶Ó­Ñ§Éú´ú±í£º" << this->m_Name << "µÇÂ¼£¡" << endl;
     cout << "\t\t ----------------------------------\n";
     cout << "\t\t|                                  |\n";
-    cout << "\t\t|          1.ç”³è¯·é¢„çº¦              |\n";
+    cout << "\t\t|          1.ÉêÇëÔ¤Ô¼              |\n";
     cout << "\t\t|                                  |\n";
-    cout << "\t\t|          2.æŸ¥çœ‹æˆ‘çš„é¢„çº¦          |\n";
+    cout << "\t\t|          2.²é¿´ÎÒµÄÔ¤Ô¼          |\n";
     cout << "\t\t|                                  |\n";
-    cout << "\t\t|          3.æŸ¥çœ‹æ‰€æœ‰é¢„çº¦          |\n";
+    cout << "\t\t|          3.²é¿´ËùÓĞÔ¤Ô¼          |\n";
     cout << "\t\t|                                  |\n";
-    cout << "\t\t|          4.å–æ¶ˆé¢„çº¦              |\n";
+    cout << "\t\t|          4.È¡ÏûÔ¤Ô¼              |\n";
     cout << "\t\t|                                  |\n";
-    cout << "\t\t|          0.æ³¨é”€ç™»å½•              |\n";
+    cout << "\t\t|          0.×¢ÏúµÇÂ¼              |\n";
     cout << "\t\t|                                  |\n";
     cout << "\t\t ----------------------------------\n";
-    cout << "è¯·é€‰æ‹©æ‚¨çš„æ“ä½œï¼š " << endl;
+    cout << "ÇëÑ¡ÔñÄúµÄ²Ù×÷£º " << endl;
 }
 
-//ç”³è¯·é¢„çº¦
+//ÉêÇëÔ¤Ô¼
 void Student::applyOrder()
 {
-    cout << "æœºæˆ¿å¼€æ”¾æ—¶é—´ä¸ºå‘¨ä¸€è‡³å‘¨äº”!" << endl;
-    cout << "è¯·è¾“å…¥ç”³è¯·é¢„çº¦çš„æ—¶é—´ï¼š" << endl;
-    cout << "1ã€å‘¨ä¸€" << endl;
-    cout << "2ã€å‘¨äºŒ" << endl;
-    cout << "3ã€å‘¨ä¸‰" << endl;
-    cout << "4ã€å‘¨å››" << endl;
-    cout << "5ã€å‘¨äº”" << endl;
+    cout << "»ú·¿¿ª·ÅÊ±¼äÎªÖÜÒ»ÖÁÖÜÎå!" << endl;
+    cout << "ÇëÊäÈëÉêÇëÔ¤Ô¼µÄÊ±¼ä£º" << endl;
+    cout << "1¡¢ÖÜÒ»" << endl;
+    cout << "2¡¢ÖÜ¶ş" << endl;
+    cout << "3¡¢ÖÜÈı" << endl;
+    cout << "4¡¢ÖÜËÄ" << endl;
+    cout << "5¡¢ÖÜÎå" << endl;
 
-    int date = 0;   //æ—¥æœŸ
-    int interval = 0; //æ—¶é—´æ®µ
-    int room = 0; //æœºæˆ¿ç¼–å·
+    int date = 0;   //ÈÕÆÚ
+    int interval = 0; //Ê±¼ä¶Î
+    int room = 0; //»ú·¿±àºÅ
 
     while (true)
     {
@@ -76,12 +76,12 @@ void Student::applyOrder()
         {
             break;
         }
-        cout << "è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << endl;
+        cout << "ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë" << endl;
     }
 
-    cout << "è¯·è¾“å…¥ç”³è¯·é¢„çº¦æ—¶é—´æ®µï¼š" << endl;
-    cout << "1ã€ä¸Šåˆ" << endl;
-    cout << "2ã€ä¸‹åˆ" << endl;
+    cout << "ÇëÊäÈëÉêÇëÔ¤Ô¼Ê±¼ä¶Î£º" << endl;
+    cout << "1¡¢ÉÏÎç" << endl;
+    cout << "2¡¢ÏÂÎç" << endl;
 
     while (true)
     {
@@ -90,13 +90,13 @@ void Student::applyOrder()
         {
             break;
         }
-        cout << "è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << endl;
+        cout << "ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë" << endl;
     }
 
-    cout << "è¯·é€‰æ‹©æœºæˆ¿ï¼š" << endl;
+    cout << "ÇëÑ¡Ôñ»ú·¿£º" << endl;
     for (int i = 0; i < vCom.size(); i++)
     {
-        cout << vCom[i].m_ComId << "å·æœºæˆ¿å®¹é‡ä¸ºï¼š " << vCom[i].m_MaxNum << endl;
+        cout << vCom[i].m_ComId << "ºÅ»ú·¿ÈİÁ¿Îª£º " << vCom[i].m_MaxNum << endl;
     }
 
     while (true)
@@ -106,10 +106,10 @@ void Student::applyOrder()
         {
             break;
         }
-        cout << "è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << endl;
+        cout << "ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë" << endl;
     }
 
-    cout << "é¢„çº¦æˆåŠŸï¼å®¡æ ¸ä¸­" << endl;
+    cout << "Ô¤Ô¼³É¹¦£¡ÉóºËÖĞ" << endl;
 
     ofstream ofs;
     ofs.open(ORDER_FILE, ios::app);
@@ -126,13 +126,13 @@ void Student::applyOrder()
     system("pause");
     system("cls");
 }
-//æŸ¥çœ‹è‡ªèº«é¢„çº¦
+//²é¿´×ÔÉíÔ¤Ô¼
 void Student::showMyOrder()
 {
     OrderFile of;
     if (of.m_Size == 0)
     {
-        cout << "æ— é¢„çº¦è®°å½•ï¼" << endl;
+        cout << "ÎŞÔ¤Ô¼¼ÇÂ¼£¡" << endl;
         system("pause");
         system("cls");
         return;
@@ -140,31 +140,31 @@ void Student::showMyOrder()
 
     for (int i = 0; i < of.m_Size; i++)
     {
-        // string  è½¬ int
-        // string åˆ©ç”¨ .c_str() è½¬ const char *
-        //åˆ©ç”¨ atoi ( const char *) è½¬ int
-        if (this->m_Id == atoi(of.m_orderData[i]["stuId"].c_str())) //æ‰¾åˆ°è‡ªèº«é¢„çº¦
+        // string  ×ª int
+        // string ÀûÓÃ .c_str() ×ª const char *
+        //ÀûÓÃ atoi ( const char *) ×ª int
+        if (this->m_Id == atoi(of.m_orderData[i]["stuId"].c_str())) //ÕÒµ½×ÔÉíÔ¤Ô¼
         {
-            cout << "é¢„çº¦æ—¥æœŸï¼š å‘¨" << of.m_orderData[i]["date"];
-            cout << " æ—¶é—´æ®µï¼š " << (of.m_orderData[i]["interval"] == "1" ? "ä¸Šåˆ" : "ä¸‹åˆ");
-            cout << " æœºæˆ¿å·ï¼š " << of.m_orderData[i]["roomId"];
-            string status = "çŠ¶æ€ï¼š ";
-            // 1 å®¡æ ¸ä¸­  2 å·²é¢„çº¦  -1 é¢„çº¦å¤±è´¥  0 å–æ¶ˆé¢„çº¦
+            cout << "Ô¤Ô¼ÈÕÆÚ£º ÖÜ" << of.m_orderData[i]["date"];
+            cout << " Ê±¼ä¶Î£º " << (of.m_orderData[i]["interval"] == "1" ? "ÉÏÎç" : "ÏÂÎç");
+            cout << " »ú·¿ºÅ£º " << of.m_orderData[i]["roomId"];
+            string status = "×´Ì¬£º ";
+            // 1 ÉóºËÖĞ  2 ÒÑÔ¤Ô¼  -1 Ô¤Ô¼Ê§°Ü  0 È¡ÏûÔ¤Ô¼
             if (of.m_orderData[i]["status"] == "1")
             {
-                status += "å®¡æ ¸ä¸­";
+                status += "ÉóºËÖĞ";
             }
             else if (of.m_orderData[i]["status"] == "2")
             {
-                status += "é¢„çº¦æˆåŠŸ";
+                status += "Ô¤Ô¼³É¹¦";
             }
             else if (of.m_orderData[i]["status"] == "-1")
             {
-                status += "é¢„çº¦å¤±è´¥ï¼Œå®¡æ ¸æœªé€šè¿‡";
+                status += "Ô¤Ô¼Ê§°Ü£¬ÉóºËÎ´Í¨¹ı";
             }
             else
             {
-                status += "é¢„çº¦å·²å–æ¶ˆ";
+                status += "Ô¤Ô¼ÒÑÈ¡Ïû";
             }
             cout << status << endl;
         }
@@ -174,13 +174,13 @@ void Student::showMyOrder()
     system("cls");
 }
 
-//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
+//²é¿´ËùÓĞÔ¤Ô¼
 void Student::showAllOrder()
 {
     OrderFile of;
     if (of.m_Size == 0)
     {
-        cout << "æ— é¢„çº¦è®°å½•" << endl;
+        cout << "ÎŞÔ¤Ô¼¼ÇÂ¼" << endl;
         system("pasue");
         system("cls");
         return;
@@ -188,29 +188,29 @@ void Student::showAllOrder()
 
     for (int i = 0; i < of.m_Size; i++)
     {
-        cout << i + 1 << "ã€ ";
-        cout << "é¢„çº¦æ—¥æœŸï¼š å‘¨" << of.m_orderData[i]["date"];
-        cout << " æ—¶é—´æ®µï¼š " << (of.m_orderData[i]["interval"] == "1" ? "ä¸Šåˆ" : "ä¸‹åˆ");
-        cout << " å­¦å·ï¼š " << of.m_orderData[i]["stuId"];
-        cout << " å§“åï¼š " << of.m_orderData[i]["stuName"];
-        cout << " æœºæˆ¿ç¼–å·ï¼š " << of.m_orderData[i]["roomId"];
-        string status = " çŠ¶æ€ï¼š";
-        // 1 å®¡æ ¸ä¸­ 2 å·²é¢„çº¦  -1é¢„çº¦å¤±è´¥  0 å–æ¶ˆé¢„çº¦
+        cout << i + 1 << "¡¢ ";
+        cout << "Ô¤Ô¼ÈÕÆÚ£º ÖÜ" << of.m_orderData[i]["date"];
+        cout << " Ê±¼ä¶Î£º " << (of.m_orderData[i]["interval"] == "1" ? "ÉÏÎç" : "ÏÂÎç");
+        cout << " Ñ§ºÅ£º " << of.m_orderData[i]["stuId"];
+        cout << " ĞÕÃû£º " << of.m_orderData[i]["stuName"];
+        cout << " »ú·¿±àºÅ£º " << of.m_orderData[i]["roomId"];
+        string status = " ×´Ì¬£º";
+        // 1 ÉóºËÖĞ 2 ÒÑÔ¤Ô¼  -1Ô¤Ô¼Ê§°Ü  0 È¡ÏûÔ¤Ô¼
         if (of.m_orderData[i]["status"] == "1")
         {
-            status += "å®¡æ ¸ä¸­";
+            status += "ÉóºËÖĞ";
         }
         else if (of.m_orderData[i]["status"] == "2")
         {
-            status += "é¢„çº¦æˆåŠŸ";
+            status += "Ô¤Ô¼³É¹¦";
         }
         else if (of.m_orderData[i]["status"] == "-1")
         {
-            status += "é¢„çº¦å¤±è´¥ï¼Œå®¡æ ¸æœªé€šè¿‡";
+            status += "Ô¤Ô¼Ê§°Ü£¬ÉóºËÎ´Í¨¹ı";
         }
         else
         {
-            status += "é¢„çº¦å·²å–æ¶ˆ";
+            status += "Ô¤Ô¼ÒÑÈ¡Ïû";
         }
         cout << status << endl;
     }
@@ -218,42 +218,42 @@ void Student::showAllOrder()
     system("pause");
     system("cls");
 }
-//å–æ¶ˆé¢„çº¦
+//È¡ÏûÔ¤Ô¼
 void Student::cancelOrder()
 {
     OrderFile of;
     if (of.m_Size == 0)
     {
-        cout << "æ— é¢„çº¦è®°å½•" << endl;
+        cout << "ÎŞÔ¤Ô¼¼ÇÂ¼" << endl;
         system("pause");
         system("cls");
         return;
     }
 
-    cout << "å®¡æ ¸ä¸­æˆ–é¢„çº¦æˆåŠŸçš„è®°å½•å¯ä»¥å–æ¶ˆï¼Œè¯·è¾“å…¥å–æ¶ˆçš„è®°å½•" << endl;
-    vector<int>v; //å­˜æ”¾åœ¨æœ€å¤§å®¹å™¨ä¸­çš„ä¸‹æ ‡ç¼–å·
+    cout << "ÉóºËÖĞ»òÔ¤Ô¼³É¹¦µÄ¼ÇÂ¼¿ÉÒÔÈ¡Ïû£¬ÇëÊäÈëÈ¡ÏûµÄ¼ÇÂ¼" << endl;
+    vector<int>v; //´æ·ÅÔÚ×î´óÈİÆ÷ÖĞµÄÏÂ±ê±àºÅ
     int index = 1;
     for (int i = 0; i < of.m_Size; i++)
     {
-        //å…ˆåˆ¤æ–­æ˜¯è‡ªèº«å­¦å·
+        //ÏÈÅĞ¶ÏÊÇ×ÔÉíÑ§ºÅ
         if (this->m_Id == atoi(of.m_orderData[i]["stuId"].c_str()))
         {
-            //å†ç­›é€‰çŠ¶æ€  å®¡æ ¸ä¸­æˆ–é¢„çº¦æˆåŠŸ
+            //ÔÙÉ¸Ñ¡×´Ì¬  ÉóºËÖĞ»òÔ¤Ô¼³É¹¦
             if (of.m_orderData[i]["status"] == "1" || of.m_orderData[i]["status"] == "2")
             {
                 v.push_back(i);
-                cout << index++ << "ã€ ";
-                cout << "é¢„çº¦æ—¥æœŸï¼š å‘¨" << of.m_orderData[i]["date"];
-                cout << " æ—¶é—´æ®µï¼š " << (of.m_orderData[i]["interval"] == "1" ? "ä¸Šåˆ" : "ä¸‹åˆ");
-                cout << " æœºæˆ¿ç¼–å·ï¼š " << of.m_orderData[i]["roomId"];
-                string status = " çŠ¶æ€ï¼š ";
+                cout << index++ << "¡¢ ";
+                cout << "Ô¤Ô¼ÈÕÆÚ£º ÖÜ" << of.m_orderData[i]["date"];
+                cout << " Ê±¼ä¶Î£º " << (of.m_orderData[i]["interval"] == "1" ? "ÉÏÎç" : "ÏÂÎç");
+                cout << " »ú·¿±àºÅ£º " << of.m_orderData[i]["roomId"];
+                string status = " ×´Ì¬£º ";
                 if (of.m_orderData[i]["status"] == "1")
                 {
-                    status += "å®¡æ ¸ä¸­";
+                    status += "ÉóºËÖĞ";
                 }
                 else if (of.m_orderData[i]["status"] == "2")
                 {
-                    status += "é¢„çº¦æˆåŠŸ";
+                    status += "Ô¤Ô¼³É¹¦";
                 }
                 cout << status << endl;
             }
@@ -261,7 +261,7 @@ void Student::cancelOrder()
     }
 
 
-    cout << "è¯·è¾“å…¥å–æ¶ˆçš„è®°å½•ï¼Œ0ä»£è¡¨è¿”å›" << endl;
+    cout << "ÇëÊäÈëÈ¡ÏûµÄ¼ÇÂ¼£¬0´ú±í·µ»Ø" << endl;
     int select = 0;
 
     while (true)
@@ -280,12 +280,12 @@ void Student::cancelOrder()
 
                 of.updateOrder();
 
-                cout << "å·²å–æ¶ˆé¢„çº¦" << endl;
+                cout << "ÒÑÈ¡ÏûÔ¤Ô¼" << endl;
                 break;
             }
         }
 
-        cout << "è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << endl;
+        cout << "ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë" << endl;
     }
 
     system("pause");
